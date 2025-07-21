@@ -10,83 +10,132 @@
 
   <header class="bg-indigo-700 text-white p-6 shadow-md">
     <h1 class="text-4xl font-bold text-center">📖 EverRead</h1>
-    <p class="text-center mt-2 text-lg">Free public domain eBooks — read directly inside EverRead.</p>
+    <p class="text-center mt-2 text-lg">Free public domain eBooks — read inside EverRead, page by page.</p>
   </header>
 
-  <main class="p-6 max-w-5xl mx-auto">
-    <div class="grid gap-6 grid-cols-1 md:grid-cols-2">
+  <main class="p-6 max-w-5xl mx-auto grid gap-6 grid-cols-1 md:grid-cols-2">
 
-      <!-- Book Cards -->
-      <button onclick="loadBook('Pride and Prejudice', 'https://www.gutenberg.org/files/1342/1342-0.txt')" class="bg-white rounded-xl shadow hover:shadow-md p-4 text-left transition">
-        <img src="https://www.gutenberg.org/cache/epub/1342/pg1342.cover.medium.jpg" class="w-full h-60 object-cover rounded mb-3">
-        <h2 class="text-xl font-semibold">Pride and Prejudice</h2>
-        <p class="text-sm text-gray-600">Jane Austen</p>
+    <!-- Book Template -->
+    <div class="bg-white rounded-xl shadow p-4">
+      <img src="https://www.gutenberg.org/cache/epub/1342/pg1342.cover.medium.jpg" class="w-full h-60 object-cover rounded mb-3" />
+      <h2 class="text-xl font-semibold">Pride and Prejudice</h2>
+      <p class="text-sm text-gray-600 mb-2">Jane Austen</p>
+      <button onclick="startReading('Pride and Prejudice', 'https://www.gutenberg.org/files/1342/1342-0.txt')" class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700">
+        Read Now
       </button>
-
-      <button onclick="loadBook('Frankenstein', 'https://www.gutenberg.org/files/84/84-0.txt')" class="bg-white rounded-xl shadow hover:shadow-md p-4 text-left transition">
-        <img src="https://www.gutenberg.org/cache/epub/84/pg84.cover.medium.jpg" class="w-full h-60 object-cover rounded mb-3">
-        <h2 class="text-xl font-semibold">Frankenstein</h2>
-        <p class="text-sm text-gray-600">Mary Shelley</p>
-      </button>
-
-      <button onclick="loadBook('Huckleberry Finn', 'https://www.gutenberg.org/files/76/76-0.txt')" class="bg-white rounded-xl shadow hover:shadow-md p-4 text-left transition">
-        <img src="https://www.gutenberg.org/cache/epub/76/pg76.cover.medium.jpg" class="w-full h-60 object-cover rounded mb-3">
-        <h2 class="text-xl font-semibold">Adventures of Huckleberry Finn</h2>
-        <p class="text-sm text-gray-600">Mark Twain</p>
-      </button>
-
-      <button onclick="loadBook('Moby Dick', 'https://www.gutenberg.org/files/2701/2701-0.txt')" class="bg-white rounded-xl shadow hover:shadow-md p-4 text-left transition">
-        <img src="https://www.gutenberg.org/cache/epub/2701/pg2701.cover.medium.jpg" class="w-full h-60 object-cover rounded mb-3">
-        <h2 class="text-xl font-semibold">Moby Dick</h2>
-        <p class="text-sm text-gray-600">Herman Melville</p>
-      </button>
-
-      <button onclick="loadBook('A Tale of Two Cities', 'https://www.gutenberg.org/files/98/98-0.txt')" class="bg-white rounded-xl shadow hover:shadow-md p-4 text-left transition">
-        <img src="https://www.gutenberg.org/cache/epub/98/pg98.cover.medium.jpg" class="w-full h-60 object-cover rounded mb-3">
-        <h2 class="text-xl font-semibold">A Tale of Two Cities</h2>
-        <p class="text-sm text-gray-600">Charles Dickens</p>
-      </button>
-
     </div>
 
-    <!-- Reader Section -->
-    <section id="reader" class="mt-12 bg-white shadow-lg rounded-xl p-6 hidden">
-      <div class="flex justify-between items-center mb-4">
-        <h2 id="reader-title" class="text-2xl font-bold"></h2>
-        <button onclick="closeReader()" class="text-red-600 font-semibold hover:underline text-sm">Close</button>
-      </div>
-      <pre id="reader-content" class="whitespace-pre-wrap text-sm font-serif max-h-[70vh] overflow-y-auto text-gray-800"></pre>
-    </section>
+    <div class="bg-white rounded-xl shadow p-4">
+      <img src="https://www.gutenberg.org/cache/epub/84/pg84.cover.medium.jpg" class="w-full h-60 object-cover rounded mb-3" />
+      <h2 class="text-xl font-semibold">Frankenstein</h2>
+      <p class="text-sm text-gray-600 mb-2">Mary Shelley</p>
+      <button onclick="startReading('Frankenstein', 'https://www.gutenberg.org/files/84/84-0.txt')" class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700">
+        Read Now
+      </button>
+    </div>
+
+    <div class="bg-white rounded-xl shadow p-4">
+      <img src="https://www.gutenberg.org/cache/epub/76/pg76.cover.medium.jpg" class="w-full h-60 object-cover rounded mb-3" />
+      <h2 class="text-xl font-semibold">Huckleberry Finn</h2>
+      <p class="text-sm text-gray-600 mb-2">Mark Twain</p>
+      <button onclick="startReading('Huckleberry Finn', 'https://www.gutenberg.org/files/76/76-0.txt')" class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700">
+        Read Now
+      </button>
+    </div>
+
+    <div class="bg-white rounded-xl shadow p-4">
+      <img src="https://www.gutenberg.org/cache/epub/2701/pg2701.cover.medium.jpg" class="w-full h-60 object-cover rounded mb-3" />
+      <h2 class="text-xl font-semibold">Moby Dick</h2>
+      <p class="text-sm text-gray-600 mb-2">Herman Melville</p>
+      <button onclick="startReading('Moby Dick', 'https://www.gutenberg.org/files/2701/2701-0.txt')" class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700">
+        Read Now
+      </button>
+    </div>
+
+    <div class="bg-white rounded-xl shadow p-4">
+      <img src="https://www.gutenberg.org/cache/epub/98/pg98.cover.medium.jpg" class="w-full h-60 object-cover rounded mb-3" />
+      <h2 class="text-xl font-semibold">A Tale of Two Cities</h2>
+      <p class="text-sm text-gray-600 mb-2">Charles Dickens</p>
+      <button onclick="startReading('A Tale of Two Cities', 'https://www.gutenberg.org/files/98/98-0.txt')" class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700">
+        Read Now
+      </button>
+    </div>
+
   </main>
 
+  <!-- Popup Reader -->
+  <div id="modal" class="fixed inset-0 bg-black/70 hidden items-center justify-center z-50">
+    <div class="bg-white rounded-xl shadow-xl p-6 w-[90%] max-w-3xl max-h-[90vh] flex flex-col">
+      <div class="flex justify-between items-center mb-4">
+        <h2 id="book-title" class="text-2xl font-bold">Loading...</h2>
+        <button onclick="closeReader()" class="text-red-600 font-semibold hover:underline text-sm">Close</button>
+      </div>
+      <div id="page-content" class="overflow-y-auto flex-1 whitespace-pre-wrap font-serif text-sm border p-4 rounded bg-gray-50"></div>
+      <div class="mt-4 flex justify-between items-center">
+        <button onclick="prevPage()" class="px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded text-sm">&larr; Prev</button>
+        <span id="page-number" class="text-gray-600 text-sm"></span>
+        <button onclick="nextPage()" class="px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded text-sm">Next &rarr;</button>
+      </div>
+    </div>
+  </div>
+
   <footer class="text-center text-gray-500 text-sm py-6">
-    <p>&copy; 2025 EverRead. All books sourced from <a href="https://www.gutenberg.org" class="underline hover:text-gray-700">Project Gutenberg</a>.</p>
+    <p>&copy; 2025 EverRead. Books via <a href="https://www.gutenberg.org" class="underline hover:text-gray-700">Project Gutenberg</a>.</p>
   </footer>
 
   <script>
-    function loadBook(title, url) {
-      const reader = document.getElementById("reader");
-      const content = document.getElementById("reader-content");
-      const heading = document.getElementById("reader-title");
+    let pages = [];
+    let currentPage = 0;
 
-      heading.textContent = "Loading \"" + title + "\"...";
-      content.textContent = "Fetching book content...";
-      reader.classList.remove("hidden");
+    function paginate(text, wordsPerPage = 300) {
+      const words = text.split(/\s+/);
+      const pageCount = Math.ceil(words.length / wordsPerPage);
+      const result = [];
+      for (let i = 0; i < pageCount; i++) {
+        result.push(words.slice(i * wordsPerPage, (i + 1) * wordsPerPage).join(" "));
+      }
+      return result;
+    }
 
+    function startReading(title, url) {
+      document.getElementById("modal").classList.remove("hidden");
+      document.getElementById("book-title").textContent = title;
+      document.getElementById("page-content").textContent = "Loading book...";
       fetch(url)
-        .then(response => response.text())
+        .then(res => res.text())
         .then(text => {
-          heading.textContent = title;
-          content.textContent = text;
+          pages = paginate(text);
+          currentPage = 0;
+          showPage();
         })
         .catch(err => {
-          heading.textContent = title;
-          content.textContent = "Failed to load the book.";
+          document.getElementById("page-content").textContent = "Failed to load book.";
         });
     }
 
+    function showPage() {
+      document.getElementById("page-content").textContent = pages[currentPage] || "No content.";
+      document.getElementById("page-number").textContent = `Page ${currentPage + 1} of ${pages.length}`;
+    }
+
+    function nextPage() {
+      if (currentPage < pages.length - 1) {
+        currentPage++;
+        showPage();
+      }
+    }
+
+    function prevPage() {
+      if (currentPage > 0) {
+        currentPage--;
+        showPage();
+      }
+    }
+
     function closeReader() {
-      document.getElementById("reader").classList.add("hidden");
+      document.getElementById("modal").classList.add("hidden");
+      pages = [];
+      currentPage = 0;
     }
   </script>
 
