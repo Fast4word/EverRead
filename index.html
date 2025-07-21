@@ -3,59 +3,81 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Free eBooks Library</title>
+  <title>EverRead – Free Public Domain eBooks</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100 text-gray-800">
-  <header class="bg-blue-700 text-white p-6 shadow-md">
-    <h1 class="text-3xl font-bold text-center">📚 Free eBooks Library</h1>
-    <p class="text-center mt-2">Download and enjoy classic books — no registration, no ads.</p>
+<body class="bg-gray-50 text-gray-800">
+  <header class="bg-indigo-700 text-white p-6 shadow-md">
+    <h1 class="text-4xl font-bold text-center">📖 EverRead</h1>
+    <p class="text-center mt-2 text-lg">Free public domain eBooks you can read instantly. No ads. No signups.</p>
   </header>
 
-  <main class="p-6 max-w-5xl mx-auto grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-    <!-- Book 1 -->
-    <div class="bg-white rounded-xl shadow p-4">
-      <img src="https://www.gutenberg.org/cache/epub/1342/pg1342.cover.medium.jpg" alt="Pride and Prejudice" class="rounded mb-4 w-full h-60 object-cover" />
-      <h2 class="text-xl font-semibold">Pride and Prejudice</h2>
-      <p class="text-sm text-gray-600 mb-2">By Jane Austen</p>
-      <a href="https://www.gutenberg.org/ebooks/1342" target="_blank" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 inline-block">Read / Download</a>
-    </div>
+  <main class="p-6 max-w-6xl mx-auto space-y-12">
+    
+    <!-- BOOK 1 -->
+    <section class="bg-white rounded-xl shadow p-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <img src="https://www.gutenberg.org/cache/epub/1342/pg1342.cover.medium.jpg" alt="Pride and Prejudice" class="rounded w-full h-60 object-cover" />
+        <div class="md:col-span-2">
+          <h2 class="text-2xl font-semibold">Pride and Prejudice</h2>
+          <p class="text-gray-600 mb-4">By Jane Austen • ~200+ pages</p>
+          <iframe src="https://www.gutenberg.org/files/1342/1342-h/1342-h.htm" class="w-full h-96 border rounded" loading="lazy"></iframe>
+        </div>
+      </div>
+    </section>
 
-    <!-- Book 2 -->
-    <div class="bg-white rounded-xl shadow p-4">
-      <img src="https://www.gutenberg.org/cache/epub/84/pg84.cover.medium.jpg" alt="Frankenstein" class="rounded mb-4 w-full h-60 object-cover" />
-      <h2 class="text-xl font-semibold">Frankenstein</h2>
-      <p class="text-sm text-gray-600 mb-2">By Mary Shelley</p>
-      <a href="https://www.gutenberg.org/ebooks/84" target="_blank" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 inline-block">Read / Download</a>
-    </div>
+    <!-- BOOK 2 -->
+    <section class="bg-white rounded-xl shadow p-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <img src="https://www.gutenberg.org/cache/epub/84/pg84.cover.medium.jpg" alt="Frankenstein" class="rounded w-full h-60 object-cover" />
+        <div class="md:col-span-2">
+          <h2 class="text-2xl font-semibold">Frankenstein</h2>
+          <p class="text-gray-600 mb-4">By Mary Shelley • ~120+ pages</p>
+          <iframe src="https://www.gutenberg.org/files/84/84-h/84-h.htm" class="w-full h-96 border rounded" loading="lazy"></iframe>
+        </div>
+      </div>
+    </section>
 
-    <!-- Book 3 -->
-    <div class="bg-white rounded-xl shadow p-4">
-      <img src="https://www.gutenberg.org/cache/epub/76/pg76.cover.medium.jpg" alt="Adventures of Huckleberry Finn" class="rounded mb-4 w-full h-60 object-cover" />
-      <h2 class="text-xl font-semibold">Huckleberry Finn</h2>
-      <p class="text-sm text-gray-600 mb-2">By Mark Twain</p>
-      <a href="https://www.gutenberg.org/ebooks/76" target="_blank" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 inline-block">Read / Download</a>
-    </div>
+    <!-- BOOK 3 -->
+    <section class="bg-white rounded-xl shadow p-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <img src="https://www.gutenberg.org/cache/epub/76/pg76.cover.medium.jpg" alt="Huckleberry Finn" class="rounded w-full h-60 object-cover" />
+        <div class="md:col-span-2">
+          <h2 class="text-2xl font-semibold">Adventures of Huckleberry Finn</h2>
+          <p class="text-gray-600 mb-4">By Mark Twain • ~250+ pages</p>
+          <iframe src="https://www.gutenberg.org/files/76/76-h/76-h.htm" class="w-full h-96 border rounded" loading="lazy"></iframe>
+        </div>
+      </div>
+    </section>
 
-    <!-- Book 4 -->
-    <div class="bg-white rounded-xl shadow p-4">
-      <img src="https://www.gutenberg.org/cache/epub/2701/pg2701.cover.medium.jpg" alt="Moby Dick" class="rounded mb-4 w-full h-60 object-cover" />
-      <h2 class="text-xl font-semibold">Moby Dick</h2>
-      <p class="text-sm text-gray-600 mb-2">By Herman Melville</p>
-      <a href="https://www.gutenberg.org/ebooks/2701" target="_blank" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 inline-block">Read / Download</a>
-    </div>
+    <!-- BOOK 4 -->
+    <section class="bg-white rounded-xl shadow p-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <img src="https://www.gutenberg.org/cache/epub/2701/pg2701.cover.medium.jpg" alt="Moby Dick" class="rounded w-full h-60 object-cover" />
+        <div class="md:col-span-2">
+          <h2 class="text-2xl font-semibold">Moby Dick</h2>
+          <p class="text-gray-600 mb-4">By Herman Melville • ~500+ pages</p>
+          <iframe src="https://www.gutenberg.org/files/2701/2701-h/2701-h.htm" class="w-full h-96 border rounded" loading="lazy"></iframe>
+        </div>
+      </div>
+    </section>
 
-    <!-- Book 5 -->
-    <div class="bg-white rounded-xl shadow p-4">
-      <img src="https://www.gutenberg.org/cache/epub/98/pg98.cover.medium.jpg" alt="A Tale of Two Cities" class="rounded mb-4 w-full h-60 object-cover" />
-      <h2 class="text-xl font-semibold">A Tale of Two Cities</h2>
-      <p class="text-sm text-gray-600 mb-2">By Charles Dickens</p>
-      <a href="https://www.gutenberg.org/ebooks/98" target="_blank" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 inline-block">Read / Download</a>
-    </div>
+    <!-- BOOK 5 -->
+    <section class="bg-white rounded-xl shadow p-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <img src="https://www.gutenberg.org/cache/epub/98/pg98.cover.medium.jpg" alt="A Tale of Two Cities" class="rounded w-full h-60 object-cover" />
+        <div class="md:col-span-2">
+          <h2 class="text-2xl font-semibold">A Tale of Two Cities</h2>
+          <p class="text-gray-600 mb-4">By Charles Dickens • ~300+ pages</p>
+          <iframe src="https://www.gutenberg.org/files/98/98-h/98-h.htm" class="w-full h-96 border rounded" loading="lazy"></iframe>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer class="text-center text-gray-500 text-sm py-6">
-    <p>&copy; 2025 Free eBooks Library. All books are in the public domain.</p>
+    <p>&copy; 2025 EverRead. All books are in the public domain via <a href="https://www.gutenberg.org" class="underline hover:text-gray-700">Project Gutenberg</a>.</p>
   </footer>
 </body>
 </html>
