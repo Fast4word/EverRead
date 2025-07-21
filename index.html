@@ -28,6 +28,27 @@
       <p class="text-sm text-gray-600 mb-2">Mary Shelley</p>
       <button onclick="openReader('Frankenstein', 'https://www.gutenberg.org/files/84/84-0.txt')" class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700">Read Now</button>
     </div>
+
+    <div class="bg-white rounded-xl shadow p-4">
+      <img src="https://www.gutenberg.org/cache/epub/76/pg76.cover.medium.jpg" class="w-full h-60 object-cover rounded mb-3" />
+      <h2 class="text-xl font-semibold">Huckleberry Finn</h2>
+      <p class="text-sm text-gray-600 mb-2">Mark Twain</p>
+      <button onclick="openReader('Huckleberry Finn', 'https://www.gutenberg.org/files/76/76-0.txt')" class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700">Read Now</button>
+    </div>
+
+    <div class="bg-white rounded-xl shadow p-4">
+      <img src="https://www.gutenberg.org/cache/epub/2701/pg2701.cover.medium.jpg" class="w-full h-60 object-cover rounded mb-3" />
+      <h2 class="text-xl font-semibold">Moby Dick</h2>
+      <p class="text-sm text-gray-600 mb-2">Herman Melville</p>
+      <button onclick="openReader('Moby Dick', 'https://www.gutenberg.org/files/2701/2701-0.txt')" class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700">Read Now</button>
+    </div>
+
+    <div class="bg-white rounded-xl shadow p-4">
+      <img src="https://www.gutenberg.org/cache/epub/98/pg98.cover.medium.jpg" class="w-full h-60 object-cover rounded mb-3" />
+      <h2 class="text-xl font-semibold">A Tale of Two Cities</h2>
+      <p class="text-sm text-gray-600 mb-2">Charles Dickens</p>
+      <button onclick="openReader('A Tale of Two Cities', 'https://www.gutenberg.org/files/98/98-0.txt')" class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700">Read Now</button>
+    </div>
   </main>
 
   <!-- IN-PAGE READER WINDOW -->
@@ -74,7 +95,8 @@
       contentEl.textContent = "Loading book...";
       pageEl.textContent = "";
 
-      fetch(url)
+      // Use CORS proxy to fetch the book
+      fetch("https://corsproxy.io/?" + encodeURIComponent(url))
         .then(res => res.text())
         .then(text => {
           pages = paginate(text);
@@ -83,6 +105,7 @@
         })
         .catch(err => {
           contentEl.textContent = "Failed to load book.";
+          console.error("Book load error:", err);
         });
     }
 
